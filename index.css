@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  /* overflow: hidden; */
+}
+
+a {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  } */
+  
+
+#box{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-color: rgb(0,0,0,0.4);
+    border-style: solid;
+    border-top-width: calc(50vh - 100px);
+    border-bottom-width: calc(50vh - 100px);
+    border-right-width: calc(50vw - 100px);
+    border-left-width: calc(50vw - 100px);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#innerBox{
+    height: calc(100% - 4px);
+    width:  calc(100% - 4px);
+    border: 2px solid white;
+    /* border-radius: 40px; */
+}
+
+#reader {
+  position: absolute!important;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#reader video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto!important;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#history{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 10;
+    width: fit-content;
+    font-size: 16px;
+    display: none;
+}
+
+#scan-result{
+    z-index: 10;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+#result-container{
+  padding:10px
+}
+#history-title{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.historyItem{
+  /* height:24px; */
+  padding:12px 0px 8px;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+
+.SoftKey {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 38px;
+  background: black;
+}
+
+.SoftKeyContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.captureButton {
+  height: 38px;
+  width: 38px;
+  border-radius: 25px;
+  background-image: url("./images/lens.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  z-index: 10;
+}
+
+.sideButton {
+  height: 100%;
+  width: 70px;
+}
+
+
+#Settings {
+  position: fixed;
+  bottom: 38px;
+  width: 100vw;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: black;
+}
+
+.settingsContainer {
+  width: 100%;
+
+}
+
+.settingsInnerContainer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.settingsTitle {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingsItem {
+  width: 100vw;
+  height: 32px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 16px;
+  align-items: center;
+  text-align: left;
+}
+
+.settingsItem:active {
+  background: #19736a;
+}
+
+.outerRadio {
+  border: 1px solid white;
+  height: 14px;
+  width: 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerRadio {
+  background: white;
+  height: 9px;
+  width: 9px;
+  border-radius: 10px;
+}
+
+.settingsModeSelect{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 32px;
+}
+
+.settingsModeItem{
+  height: 100%;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6px;
+}
+
+.settingsModeImage{
+width: 20px;
+height: 20px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.settingsModeIndicator{
+ height: 3px;
+ width: 100%;
+ margin-top: 3px;
+ background-color: #19736a;
+}
+
+#galleryContainer{
+ background-color: #19736a;
+}
