@@ -1,13 +1,14 @@
 {
   "version": "1.0.0",
-  "name": "QRGo",
-  "description": "Simple example of a to-do list",
-  "type": "web",
+  "name": "QRTest",
+  "description": "Rapid QR Scanner",
   "launch_path": "/index.html",
   "icons": {
-    "56": "/assets/icons/kaios_56.png",
-    "112": "/assets/icons/kaios_112.png"
+    "56": "/icons/kaios_56.png",
+    "112": "/icons/kaios_112.png"
   },
+  "cursor": true,
+  "type":"privileged",
   "developer": {
     "name": "SpudnikLab",
     "url": "https://www.spudniklab.com"
@@ -19,5 +20,11 @@
       "description": "Simple example of a to-do list"
     }
   },
+  "permissions": 
+	{
+		"video-capture": {
+		"description": "Reading Codes using the Camera"
+		}
+	},
   "default_locale": "en-US"
 }
